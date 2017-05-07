@@ -1,0 +1,101 @@
+docker run -d -p 5000:5000 --restart=always --name registry registry:2
+2f65a032affd681aaa2bdc2702395e4a21ab0c1069f9ca25e89fc94a45d3d139
+root@sri-VirtualBox:~/pythonlearn/testgit# docker ps
+CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS                    NAMES
+2f65a032affd        registry:2          "/entrypoint.sh /etc/"   21 seconds ago      Up 20 seconds       0.0.0.0:5000->5000/tcp   registry
+root@sri-VirtualBox:~/pythonlearn/testgit# docker images
+REPOSITORY                  TAG                 IMAGE ID            CREATED             SIZE
+helloworld                  latest              bbe3a7ade48f        36 hours ago        99.02 MB
+localhost:5000/helloworld   latest              bbe3a7ade48f        36 hours ago        99.02 MB
+testusers3                  latest              005952655a64        2 days ago          685 MB
+<none>                      <none>              12e0ace9f022        2 days ago          685 MB
+testtodo                    latest              e802feb3a3a9        2 days ago          685 MB
+usersimage                  latest              adf720a0a997        2 days ago          685 MB
+<none>                      <none>              2e86f2bb3f0a        2 days ago          685 MB
+<none>                      <none>              a5dec24e214d        2 days ago          685 MB
+<none>                      <none>              508f193b35e1        2 days ago          685 MB
+<none>                      <none>              a3b9ca5227a2        2 days ago          685 MB
+<none>                      <none>              ee391411854b        2 days ago          685 MB
+<none>                      <none>              b379ef742443        2 days ago          685 MB
+<none>                      <none>              9edbd3d03b89        2 days ago          685 MB
+<none>                      <none>              fab9df131215        2 days ago          685 MB
+<none>                      <none>              18e000bef21f        2 days ago          685 MB
+<none>                      <none>              0749ad98bbcb        2 days ago          685 MB
+<none>                      <none>              731fb29d41a0        3 days ago          685 MB
+todoimage                   latest              d41ee077dfba        3 days ago          685 MB
+<none>                      <none>              681ecc1843cf        3 days ago          685 MB
+<none>                      <none>              c9459c7e4e16        3 days ago          685 MB
+<none>                      <none>              e023f169fa87        3 days ago          685 MB
+<none>                      <none>              f815e9cda114        3 days ago          685 MB
+todomanager                 latest              f93fc9b48de2        3 days ago          685 MB
+<none>                      <none>              f69033226892        3 days ago          101.5 MB
+<none>                      <none>              9ef4552e80a8        3 days ago          101.5 MB
+<none>                      <none>              2102b225e042        3 days ago          101.5 MB
+firstname                   latest              f9c035d51dc5        3 days ago          99.02 MB
+pythonname                  latest              544e83009d42        3 days ago          99.02 MB
+pythonhw                    latest              36feb245aa21        4 days ago          99.02 MB
+test                        latest              36feb245aa21        4 days ago          99.02 MB
+python                      3.5-alpine          866d7571db6d        10 days ago         88.76 MB
+ubuntu                      latest              f7b3f317ec73        12 days ago         117.3 MB
+registry                    2                   136c8b16df20        4 weeks ago         33.19 MB
+python                      2.7.12              0900c636e10d        4 months ago        676.3 MB
+
+root@sri-VirtualBox:~/pythonlearn/testgit# docker tag testhello:latest localhost:5000/testhello:latest
+Error response from daemon: no such id: testhello:latest
+root@sri-VirtualBox:~/pythonlearn/testgit# docker tag helloworld:latest localhost:5000/helloworld:latest
+root@sri-VirtualBox:~/pythonlearn/testgit# docker images
+REPOSITORY                  TAG                 IMAGE ID            CREATED             SIZE
+helloworld                  latest              bbe3a7ade48f        36 hours ago        99.02 MB
+localhost:5000/helloworld   latest              bbe3a7ade48f        36 hours ago        99.02 MB
+testusers3                  latest              005952655a64        2 days ago          685 MB
+<none>                      <none>              12e0ace9f022        2 days ago          685 MB
+testtodo                    latest              e802feb3a3a9        2 days ago          685 MB
+usersimage                  latest              adf720a0a997        2 days ago          685 MB
+<none>                      <none>              2e86f2bb3f0a        2 days ago          685 MB
+<none>                      <none>              a5dec24e214d        2 days ago          685 MB
+<none>                      <none>              508f193b35e1        2 days ago          685 MB
+<none>                      <none>              a3b9ca5227a2        2 days ago          685 MB
+<none>                      <none>              ee391411854b        2 days ago          685 MB
+<none>                      <none>              b379ef742443        2 days ago          685 MB
+<none>                      <none>              9edbd3d03b89        2 days ago          685 MB
+<none>                      <none>              fab9df131215        2 days ago          685 MB
+<none>                      <none>              18e000bef21f        2 days ago          685 MB
+<none>                      <none>              0749ad98bbcb        2 days ago          685 MB
+<none>                      <none>              731fb29d41a0        3 days ago          685 MB
+todoimage                   latest              d41ee077dfba        3 days ago          685 MB
+<none>                      <none>              681ecc1843cf        3 days ago          685 MB
+<none>                      <none>              c9459c7e4e16        3 days ago          685 MB
+<none>                      <none>              e023f169fa87        3 days ago          685 MB
+<none>                      <none>              f815e9cda114        3 days ago          685 MB
+todomanager                 latest              f93fc9b48de2        3 days ago          685 MB
+<none>                      <none>              f69033226892        3 days ago          101.5 MB
+<none>                      <none>              9ef4552e80a8        3 days ago          101.5 MB
+<none>                      <none>              2102b225e042        3 days ago          101.5 MB
+firstname                   latest              f9c035d51dc5        3 days ago          99.02 MB
+pythonname                  latest              544e83009d42        3 days ago          99.02 MB
+pythonhw                    latest              36feb245aa21        4 days ago          99.02 MB
+test                        latest              36feb245aa21        4 days ago          99.02 MB
+python                      3.5-alpine          866d7571db6d        10 days ago         88.76 MB
+ubuntu                      latest              f7b3f317ec73        12 days ago         117.3 MB
+registry                    2                   136c8b16df20        4 weeks ago         33.19 MB
+python                      2.7.12              0900c636e10d        4 months ago        676.3 MB
+root@sri-VirtualBox:~/pythonlearn/testgit# docker push localhost:5000/helloworld:latest
+The push refers to a repository [localhost:5000/helloworld]
+47709a6a0936: Pushed 
+62d5ff10f469: Pushed 
+0a6ab709b341: Pushed 
+6505671f0379: Pushed 
+9e9183fb7112: Pushed 
+84af43867f07: Pushed 
+af4997faab5b: Pushed 
+9f8566ee5135: Pushed 
+latest: digest: sha256:05ea1b015f8227265cb3fb7c9d6da5e92b6cab947ad50cfddb4a28edf9dc6a50 size: 1989
+root@sri-VirtualBox:~/pythonlearn/testgit# docker search localhost:5000/helloworld:latest
+Error response from daemon: Unexpected status code 404
+root@sri-VirtualBox:~/pythonlearn/testgit# docker pull localhost:5000/helloworld:latest
+latest: Pulling from helloworld
+Digest: sha256:05ea1b015f8227265cb3fb7c9d6da5e92b6cab947ad50cfddb4a28edf9dc6a50
+Status: Image is up to date for localhost:5000/helloworld:latest
+
+
+
