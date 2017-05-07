@@ -97,5 +97,10 @@ latest: Pulling from helloworld
 Digest: sha256:05ea1b015f8227265cb3fb7c9d6da5e92b6cab947ad50cfddb4a28edf9dc6a50
 Status: Image is up to date for localhost:5000/helloworld:latest
 
+# docker pull localhost:5000/helloworld
+Using default tag: latest
+latest: Pulling from helloworld
+Digest: sha256:05ea1b015f8227265cb3fb7c9d6da5e92b6cab947ad50cfddb4a28edf9dc6a50
+Status: Image is up to date for localhost:5000/helloworld:latest
 
 
